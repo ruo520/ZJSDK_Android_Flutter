@@ -29,7 +29,7 @@ class H5AdPage extends StatelessWidget {
                   "uid-18888888888",
                   username: "username-Jerry",
                   avatarUrl: "avatarUrl-https://xxx.xxx/xxx.xxx",
-                  onIntegralNotEnough: (String? uid, int? needIntegral) {
+                  onIntegralNotEnough: (String uid, int needIntegral) {
                     // 积分不够
                     _logPanel.setText(
                         "ZjH5Ad.onIntegralNotEnough, needIntegral = $needIntegral");
@@ -89,7 +89,7 @@ class H5AdPage extends StatelessWidget {
                     _logPanel.setText(
                         "ZjH5Ad.onZjUserBehavior, behavior = $behavior");
                   },
-                  onZjAdError: (int code, String? message) {
+                  onZjAdError: (int code, String message) {
                     // H5页面加载错误
                     _logPanel.setText("ZjH5Ad.onZjAdError[$code-$message]");
                   },

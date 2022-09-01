@@ -16,28 +16,28 @@ class ZjExpressVideoAdView extends StatelessWidget {
   final double height;
 
   /// 加载成功
-  final AdCallback1? onZjFeedFullVideoLoad;
+  final AdCallback1 onZjFeedFullVideoLoad;
 
   /// 加载失败
-  final AdErrorCallback? onZjAdError;
+  final AdErrorCallback onZjAdError;
 
   /// 渲染成功
-  final AdCallback0? onRenderSuccess;
+  final AdCallback0 onRenderSuccess;
 
   /// 渲染失败
-  final AdErrorCallback? onRenderFail;
+  final AdErrorCallback onRenderFail;
 
   /// 广告展示成功
-  final AdCallback0? onZjAdShow;
+  final AdCallback0 onZjAdShow;
 
   /// 广告点击
-  final AdCallback0? onZjAdClicked;
+  final AdCallback0 onZjAdClicked;
 
   ZjExpressVideoAdView(
-      {Key? key,
-      required this.posId,
-      required this.width,
-      required this.height,
+      {Key key,
+      @required this.posId,
+      @required this.width,
+      @required this.height,
       this.onZjFeedFullVideoLoad,
       this.onZjAdError,
       this.onRenderSuccess,

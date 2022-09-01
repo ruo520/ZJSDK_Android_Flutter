@@ -41,7 +41,7 @@ class NativeExpressPage extends StatelessWidget {
                   // 广告关闭
                   _logPanel.setText("ZjNativeExpressAd.onZjAdClose");
                 },
-                onZjAdError: (int code, String? message) {
+                onZjAdError: (int code, String message) {
                   // 广告错误
                   _logPanel
                       .setText("ZjNativeExpressAd.onZjAdError[$code-$message]");

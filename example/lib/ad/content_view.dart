@@ -4,7 +4,7 @@ import 'package:zjsdk_example/constants.dart';
 
 /// 视频内容组件演示页面
 class ContentViewPage extends StatelessWidget {
-  late ZjContentVideoView contentView;
+  ZjContentVideoView contentView;
 
   bool isShowing = true;
 
@@ -53,7 +53,7 @@ class ContentViewPage extends StatelessWidget {
         // 视频播放错误
         print("ZjContentAd.onVideoPlayError[$id]");
       },
-      onZjAdError: (int code, String? message) {
+      onZjAdError: (int code, String message) {
         // 广告加载错误
         print("ZjContentAd.onZjAdError[$code-$message]");
       },
@@ -75,7 +75,7 @@ class ContentViewPage extends StatelessWidget {
             ),
             Align(
                 alignment: Alignment.bottomCenter,
-                child: ElevatedButton(
+                child: FlatButton(
                   child: Text("显示/隐藏"),
                   onPressed: () {
                     if (isShowing) {

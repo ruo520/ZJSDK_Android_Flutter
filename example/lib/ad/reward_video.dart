@@ -59,7 +59,7 @@ class RewardVideoPage extends StatelessWidget {
                     // 广告关闭
                     _logPanel.setText("ZjRewardVideoAd.onZjAdClose");
                   },
-                  onZjAdError: (int code, String? message) {
+                  onZjAdError: (int code, String message) {
                     // 广告加载或播放错误，需要收集错误码和错误信息用于排查定位排查
                     _logPanel
                         .setText("ZjRewardVideoAd.onZjAdError[$code-$message]");

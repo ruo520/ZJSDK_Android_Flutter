@@ -42,7 +42,7 @@ class BannerViewPage extends StatelessWidget {
                   // 广告关闭
                   _logPanel.setText("ZjBannerAd.onZjAdClose");
                 },
-                onZjAdError: (int code, String? message) {
+                onZjAdError: (int code, String message) {
                   // 广告加载错误
                   _logPanel.setText("ZjBannerAd.onZjAdError[$code-$message]");
                 },

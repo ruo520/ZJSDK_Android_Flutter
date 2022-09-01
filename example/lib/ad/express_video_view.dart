@@ -32,7 +32,7 @@ class ExpressVideoPage extends StatelessWidget {
                     _logPanel.setText(
                         "ZjExpressVideoAd.onZjFeedFullVideoLoad, ret.size = $size");
                   },
-                  onZjAdError: (int code, String? message) {
+                  onZjAdError: (int code, String message) {
                     // 广告加载失败
                     _logPanel.setText(
                         "ZjExpressVideoAd.onZjAdError[$code-$message]");
@@ -41,7 +41,7 @@ class ExpressVideoPage extends StatelessWidget {
                     // 广告渲染成功
                     _logPanel.setText("ZjExpressVideoAd.onZjAdShow");
                   },
-                  onRenderFail: (int code, String? message) {
+                  onRenderFail: (int code, String message) {
                     // 广告渲染失败
                     _logPanel.setText(
                         "ZjExpressVideoAd.onRenderFail[$code-$message]");

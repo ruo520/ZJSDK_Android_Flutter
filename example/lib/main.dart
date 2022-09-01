@@ -29,8 +29,8 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           buttonTheme: ButtonThemeData(minWidth: 200),
           appBarTheme: AppBarTheme(
-            titleTextStyle: TextStyle(color: Colors.white),
-          )),
+              // titleTextStyle: TextStyle(color: Colors.white),
+              )),
       home: MyHomePage(),
       routes: <String, WidgetBuilder>{
         '/splash': (BuildContext context) => SplashPage(),

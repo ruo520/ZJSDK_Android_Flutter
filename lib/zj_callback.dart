@@ -9,4 +9,4 @@ typedef AdCallback2 = void Function(String arg0, int arg1);
 
 /// 错误回调
 /// code -> 错误码 | message -> 错误信息
-typedef AdErrorCallback = void Function(int code, String? message);
+typedef AdErrorCallback = void Function(int code, String message);

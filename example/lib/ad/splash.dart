@@ -43,7 +43,7 @@ class SplashPage extends StatelessWidget {
                 _logPanel.setText("ZjSplashAd.onZjAdClosed");
                 Navigator.popUntil(context, (route) => route.isFirst);
               },
-              onZjAdError: (int code, String? message) {
+              onZjAdError: (int code, String message) {
                 // 广告加载或渲染错误，需要收集错误码和错误信息用于排查定位排查
                 print("ZjSplashAd.onZjAdError[$code-$message]");
                 Fluttertoast.showToast(msg: "[$code-$message]");
