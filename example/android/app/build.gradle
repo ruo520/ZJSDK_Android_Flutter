@@ -1,0 +1,83 @@
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+apply plugin: 'com.android.application'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
+android {
+    compileSdkVersion 29
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId "com.zj.daylottery.demo"
+        minSdkVersion 21
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 29
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+    }
+
+    buildTypes {
+        release {
+            shrinkResources false
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    // SDK需要支持 AppCompat/ConstraintLayout/Support-V4/Material
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.4.0'
+
+    // 建议开发者优先集成OAID。Android 10 无法通过常规方式获取IMEI，影响广告测试及正式广告的填充
+    implementation(name: 'oaid_sdk_1.0.25', ext: 'aar')
+
+    // SDK
+    implementation(name: 'zj_sdk_2.4.8', ext: 'aar')
+    implementation(name: 'zj_kssdk-ct-3.3.27.3', ext: 'aar')
+
+    // x5内核，如已引入，可忽略
+    implementation(name: 'tbs_sdk_thirdapp_v4.3.0.313_44213_sharewithdownloadwithfile_withoutGame_obfs_20220722_092328', ext: 'jar')
+
+    // 微信 OpenSdk ，建议引入，提高收益
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+
+}

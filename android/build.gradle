@@ -1,0 +1,68 @@
+group 'com.zj.zjsdk.plugin'
+version '2.4.8'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 21
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+
+    // AndroidX 工程需要添加
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // 建议开发者优先集成OAID。Android 10 无法通过常规方式获取IMEI，影响广告测试及正式广告的填充
+    compileOnly(name: 'oaid_sdk_1.0.25', ext: 'aar')
+
+    // SDK
+    compileOnly(name: 'zj_sdk_2.4.8', ext: 'aar')
+    compileOnly(name: 'zj_kssdk-ct-3.3.27.3', ext: 'aar')
+
+    // x5内核，如已引入，可忽略
+    compileOnly(name: 'tbs_sdk_thirdapp_v4.3.0.313_44213_sharewithdownloadwithfile_withoutGame_obfs_20220722_092328', ext: 'jar')
+
+    // 微信 OpenSdk ，建议引入，提高收益
+    compileOnly 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+
+}
