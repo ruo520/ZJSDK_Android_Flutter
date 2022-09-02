@@ -2,7 +2,7 @@
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
 #
 Pod::Spec.new do |s|
-  s.name             = 'zjsdk'
+  s.name             = 'zjsdk_ext'
   s.version          = '2.4.8'
   s.summary          = 'No-op implementation of url_launcher_web web plugin to avoid build issues on iOS'
   s.description      = <<-DESC

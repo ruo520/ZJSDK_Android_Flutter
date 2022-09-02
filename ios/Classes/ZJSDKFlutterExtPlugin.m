@@ -1,11 +1,11 @@
-#import "ZJSDKFlutterPlugin.h"
+#import "ZJSDKFlutterExtPlugin.h"
 
-@implementation ZJSDKFlutterPlugin
+@implementation ZJSDKFlutterExtPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   FlutterMethodChannel* channel = [FlutterMethodChannel
       methodChannelWithName:@"zjsdk"
             binaryMessenger:[registrar messenger]];
-  ZJSDKFlutterPlugin* instance = [[ZJSDKFlutterPlugin alloc] init];
+  ZJSDKFlutterExtPlugin* instance = [[ZJSDKFlutterExtPlugin alloc] init];
   [registrar addMethodCallDelegate:instance channel:channel];
 }
 

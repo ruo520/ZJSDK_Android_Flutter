@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zjsdk/zj_splash_ad_view.dart';
+import 'package:zjsdk_ext/zj_splash_ad_view.dart';
 import 'package:zjsdk_example/constants.dart';
 import 'package:zjsdk_example/view/log_panel.dart';
 import 'package:fluttertoast/fluttertoast.dart';

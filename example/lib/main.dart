@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-import 'package:zjsdk/zj_sdk.dart';
+import 'package:zjsdk_ext/zj_sdk.dart';
 
 import 'package:zjsdk_example/constants.dart';
 import 'package:zjsdk_example/ad/splash.dart';

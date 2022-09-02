@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zjsdk/zj_content_video_view.dart';
+import 'package:zjsdk_ext/zj_content_video_view.dart';
 import 'package:zjsdk_example/constants.dart';
 
 /// 视频内容组件演示页面
