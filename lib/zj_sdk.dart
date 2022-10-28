@@ -14,10 +14,10 @@ class ZjSdk {
       {
 
       /// 初始化成功
-      AdCallback0 onSuccess,
+      AdCallback0? onSuccess,
 
       /// 初始化失败
-      AdCallback0 onFailure}) {
+      AdCallback0? onFailure}) {
     EventChannel eventChannel =
         EventChannel("flutter_zjsdk_plugin/event_init_sdk");
     eventChannel.receiveBroadcastStream().listen((event) {
@@ -43,31 +43,31 @@ class ZjSdk {
       {
 
       ///返回交易ID
-      AdCallback1 onZjAdTradeId,
+      AdCallback1? onZjAdTradeId,
 
       /// 加载成功
-      AdCallback0 onZjAdLoaded,
+      AdCallback0? onZjAdLoaded,
 
       /// 素材缓存成功
-      AdCallback0 onZjAdVideoCached,
+      AdCallback0? onZjAdVideoCached,
 
       /// 广告展示
-      AdCallback0 onZjAdShow,
+      AdCallback0? onZjAdShow,
 
       /// 广告获得奖励
-      AdCallback0 onZjAdReward,
+      AdCallback0? onZjAdReward,
 
       /// 广告点击
-      AdCallback0 onZjAdClick,
+      AdCallback0? onZjAdClick,
 
       /// 广告播放完成
-      AdCallback0 onZjAdVideoComplete,
+      AdCallback0? onZjAdVideoComplete,
 
       /// 广告被关闭
-      AdCallback0 onZjAdClose,
+      AdCallback0? onZjAdClose,
 
       /// 广告错误
-      AdErrorCallback onZjAdError}) {
+      AdErrorCallback? onZjAdError}) {
     EventChannel eventChannel =
         EventChannel("flutter_zjsdk_plugin/event_reward_video");
     eventChannel.receiveBroadcastStream().listen((event) {
@@ -130,19 +130,19 @@ class ZjSdk {
       {
 
       /// 加载成功
-      AdCallback0 onZjAdLoaded,
+      AdCallback0? onZjAdLoaded,
 
       /// 广告展示
-      AdCallback0 onZjAdShow,
+      AdCallback0? onZjAdShow,
 
       /// 广告点击
-      AdCallback0 onZjAdClicked,
+      AdCallback0? onZjAdClicked,
 
       /// 广告关闭
-      AdCallback0 onZjAdClosed,
+      AdCallback0? onZjAdClosed,
 
       /// 广告错误
-      AdErrorCallback onZjAdError}) {
+      AdErrorCallback? onZjAdError}) {
     EventChannel eventChannel =
         EventChannel("flutter_zjsdk_plugin/event_interstitial");
     eventChannel.receiveBroadcastStream().listen((event) {
@@ -185,25 +185,25 @@ class ZjSdk {
       {
 
       /// 加载成功
-      AdCallback0 onZjAdLoaded,
+      AdCallback0? onZjAdLoaded,
 
       /// 素材缓存成功
-      AdCallback0 onZjAdVideoCached,
+      AdCallback0? onZjAdVideoCached,
 
       /// 广告展示
-      AdCallback0 onZjAdShow,
+      AdCallback0? onZjAdShow,
 
       /// 广告点击
-      AdCallback0 onZjAdClick,
+      AdCallback0? onZjAdClick,
 
       /// 广告播放完成
-      AdCallback0 onZjAdVideoComplete,
+      AdCallback0? onZjAdVideoComplete,
 
       /// 广告关闭
-      AdCallback0 onZjAdClose,
+      AdCallback0? onZjAdClose,
 
       /// 广告错误
-      AdErrorCallback onZjAdError}) {
+      AdErrorCallback? onZjAdError}) {
     EventChannel eventChannel =
         EventChannel("flutter_zjsdk_plugin/event_full_screen_video");
     eventChannel.receiveBroadcastStream().listen((event) {
@@ -259,43 +259,43 @@ class ZjSdk {
       {
 
       /// 用户名
-      String username,
+      String? username,
 
       /// 头像Url
-      String avatarUrl,
+      String? avatarUrl,
 
       /// 积分不足，返回需要的积分
-      AdCallback2 onIntegralNotEnough,
+      AdCallback2? onIntegralNotEnough,
 
       /// 积分消耗，>0消耗积分，<0获得积分
-      AdCallback2 onIntegralExpend,
+      AdCallback2? onIntegralExpend,
 
       /// 完成任务，返回已完成的任务总数
-      AdCallback2 onFinishTasks,
+      AdCallback2? onFinishTasks,
 
       /// 退出H5
-      AdCallback1 onGameExit,
+      AdCallback1? onGameExit,
 
       /// H5页面中激励视频触发激励，返回的是完成总任务数
-      AdCallback2 onZjAdRewardFinish,
+      AdCallback2? onZjAdRewardFinish,
 
       /// 看广告奖励触发
-      AdCallback0 onZjAdReward,
+      AdCallback0? onZjAdReward,
 
       /// H5页面中激励视频加载成功
-      AdCallback0 onZjAdLoaded,
+      AdCallback0? onZjAdLoaded,
 
       /// H5页面中激励视频返回交易ID
-      AdCallback1 onZjAdTradeId,
+      AdCallback1? onZjAdTradeId,
 
       /// H5页面中激励视频点击
-      AdCallback0 onZjAdClick,
+      AdCallback0? onZjAdClick,
 
       /// 用户页面的行为操作，具体行为见文档
-      AdCallback1 onZjUserBehavior,
+      AdCallback1? onZjUserBehavior,
 
       /// 加载错误
-      AdErrorCallback onZjAdError}) {
+      AdErrorCallback? onZjAdError}) {
     EventChannel eventChannel =
         EventChannel("flutter_zjsdk_plugin/event_h5_ad");
     eventChannel.receiveBroadcastStream().listen((event) {

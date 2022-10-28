@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zjsdk_ext/zj_banner_ad_view.dart';
+import 'package:zjsdk/zj_banner_ad_view.dart';
 import 'package:zjsdk_example/constants.dart';
 import 'package:zjsdk_example/view/log_panel.dart';
 
@@ -42,7 +42,7 @@ class BannerViewPage extends StatelessWidget {
                   // 广告关闭
                   _logPanel.setText("ZjBannerAd.onZjAdClose");
                 },
-                onZjAdError: (int code, String message) {
+                onZjAdError: (int code, String? message) {
                   // 广告加载错误
                   _logPanel.setText("ZjBannerAd.onZjAdError[$code-$message]");
                 },

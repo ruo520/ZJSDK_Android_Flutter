@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-import 'package:zjsdk_ext/zj_sdk.dart';
+import 'package:zjsdk/zj_sdk.dart';
 
 import 'package:zjsdk_example/constants.dart';
 import 'package:zjsdk_example/ad/splash.dart';
@@ -29,8 +29,8 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           buttonTheme: ButtonThemeData(minWidth: 200),
           appBarTheme: AppBarTheme(
-              // titleTextStyle: TextStyle(color: Colors.white),
-              )),
+            titleTextStyle: TextStyle(color: Colors.white),
+          )),
       home: MyHomePage(),
       routes: <String, WidgetBuilder>{
         '/splash': (BuildContext context) => SplashPage(),

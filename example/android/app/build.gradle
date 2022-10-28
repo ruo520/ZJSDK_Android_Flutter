@@ -8,7 +8,7 @@ if (localPropertiesFile.exists()) {
 
 def flutterRoot = localProperties.getProperty('flutter.sdk')
 if (flutterRoot == null) {
-    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+    throw new FileNotFoundException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
 }
 
 def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
@@ -71,7 +71,7 @@ dependencies {
     implementation(name: 'oaid_sdk_1.0.25', ext: 'aar')
 
     // SDK
-    implementation(name: 'zj_sdk_2.4.8', ext: 'aar')
+    implementation(name: 'zj_sdk_2.4.9', ext: 'aar')
     implementation(name: 'zj_kssdk-ct-3.3.27.3', ext: 'aar')
 
     // x5内核，如已引入，可忽略

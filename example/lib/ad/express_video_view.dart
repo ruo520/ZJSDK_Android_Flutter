@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zjsdk_ext/zj_express_video_ad_view.dart';
+import 'package:zjsdk/zj_express_video_ad_view.dart';
 import 'package:zjsdk_example/constants.dart';
 import 'package:zjsdk_example/view/log_panel.dart';
 
@@ -32,7 +32,7 @@ class ExpressVideoPage extends StatelessWidget {
                     _logPanel.setText(
                         "ZjExpressVideoAd.onZjFeedFullVideoLoad, ret.size = $size");
                   },
-                  onZjAdError: (int code, String message) {
+                  onZjAdError: (int code, String? message) {
                     // 广告加载失败
                     _logPanel.setText(
                         "ZjExpressVideoAd.onZjAdError[$code-$message]");
@@ -41,7 +41,7 @@ class ExpressVideoPage extends StatelessWidget {
                     // 广告渲染成功
                     _logPanel.setText("ZjExpressVideoAd.onZjAdShow");
                   },
-                  onRenderFail: (int code, String message) {
+                  onRenderFail: (int code, String? message) {
                     // 广告渲染失败
                     _logPanel.setText(
                         "ZjExpressVideoAd.onRenderFail[$code-$message]");

@@ -16,42 +16,42 @@ class ZjContentVideoView extends StatelessWidget {
   final double height;
 
   /// 页面进入
-  final AdCallback1 onPageEnter;
+  final AdCallback1? onPageEnter;
 
   /// 页面恢复
-  final AdCallback1 onPageResume;
+  final AdCallback1? onPageResume;
 
   /// 页面暂停
-  final AdCallback1 onPagePause;
+  final AdCallback1? onPagePause;
 
   /// 页面离开
-  final AdCallback1 onPageLeave;
+  final AdCallback1? onPageLeave;
 
   /// 视频开始
-  final AdCallback1 onVideoPlayStart;
+  final AdCallback1? onVideoPlayStart;
 
   /// 视频暂停
-  final AdCallback1 onVideoPlayPaused;
+  final AdCallback1? onVideoPlayPaused;
 
   /// 视频恢复
-  final AdCallback1 onVideoPlayResume;
+  final AdCallback1? onVideoPlayResume;
 
   /// 视频播放完成
-  final AdCallback1 onVideoPlayCompleted;
+  final AdCallback1? onVideoPlayCompleted;
 
   /// 视频播放错误
-  final AdCallback1 onVideoPlayError;
+  final AdCallback1? onVideoPlayError;
 
   /// 加载错误
-  final AdErrorCallback onZjAdError;
+  final AdErrorCallback? onZjAdError;
 
-  MethodChannel _methodChannel;
+  MethodChannel? _methodChannel;
 
   ZjContentVideoView(
-      {Key key,
-      @required this.posId,
-      @required this.width,
-      @required this.height,
+      {Key? key,
+      required this.posId,
+      required this.width,
+      required this.height,
       this.onPageEnter,
       this.onPageResume,
       this.onPagePause,
@@ -156,10 +156,11 @@ class ZjContentVideoView extends StatelessWidget {
   }
 
   void showAd() {
-    _methodChannel.invokeMethod("showAd");
+    _methodChannel!.invokeMethod("showAd");
   }
 
   void hideAd() {
-    _methodChannel.invokeMethod("hideAd");
+    _methodChannel!.invokeMethod("hideAd");
   }
+
 }

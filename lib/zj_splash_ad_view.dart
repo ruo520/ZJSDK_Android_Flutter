@@ -16,25 +16,25 @@ class ZjSplashAdView extends StatelessWidget {
   final double height;
 
   /// 广告加载成功
-  final AdCallback0 onZjAdLoaded;
+  final AdCallback0? onZjAdLoaded;
 
   /// 广告展示
-  final AdCallback0 onZjAdShow;
+  final AdCallback0? onZjAdShow;
 
   /// 广告点击
-  final AdCallback0 onZjAdClicked;
+  final AdCallback0? onZjAdClicked;
 
   /// 广告关闭
-  final AdCallback0 onZjAdClosed;
+  final AdCallback0? onZjAdClosed;
 
   /// 广告错误
-  final AdErrorCallback onZjAdError;
+  final AdErrorCallback? onZjAdError;
 
   ZjSplashAdView(
-      {Key key,
-      @required this.posId,
-      @required this.width,
-      @required this.height,
+      {Key? key,
+      required this.posId,
+      required this.width,
+      required this.height,
       this.onZjAdLoaded,
       this.onZjAdShow,
       this.onZjAdClicked,

@@ -1,6 +1,10 @@
 # CHANGELOG
 ---
 
+## 2.4.9
+1.修复信息流 width 设置为 double.infinity 或其它大于屏幕宽度的数值时，计算LayoutParams超出屏幕的错误
+2.更新联盟SDK
+
 ## 2.4.8
 1.视频内容View增加暂停、恢复方法
 2.优化性能
